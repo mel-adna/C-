@@ -34,7 +34,7 @@ int main()
         }
         else
         {
-            std::cout << "Invalid command. Please use ADD, SEARCH or EXIT." << std::endl;
+            continue;
         }
     }
     return 0;

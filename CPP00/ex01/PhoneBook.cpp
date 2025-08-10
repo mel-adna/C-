@@ -15,6 +15,11 @@ static std::string formatField(std::string str)
     return str;
 }
 
+bool hasTab(const std::string &str)
+{
+    return str.find('\t') != std::string::npos;
+}
+
 void PhoneBook::addContact()
 {
     Contact newContact;
@@ -22,32 +27,47 @@ void PhoneBook::addContact()
 
     std::cout << "Enter First Name: ";
     std::getline(std::cin, input);
-    if (input.empty() || input.)
+    if (input.empty() || hasTab(input))
+    {
+        std::cout << "Error: Tabs are not allowed!" << std::endl;
         return;
+    }
     newContact.setFirstName(input);
 
     std::cout << "Enter Last Name: ";
     std::getline(std::cin, input);
-    if (input.empty())
+    if (input.empty() || hasTab(input))
+    {
+        std::cout << "Error: Tabs are not allowed!" << std::endl;
         return;
+    }
     newContact.setLastName(input);
 
     std::cout << "Enter Nickname: ";
     std::getline(std::cin, input);
-    if (input.empty())
+    if (input.empty() || hasTab(input))
+    {
+        std::cout << "Error: Tabs are not allowed!" << std::endl;
         return;
+    }
     newContact.setNickname(input);
 
     std::cout << "Enter Phone Number: ";
     std::getline(std::cin, input);
-    if (input.empty())
+    if (input.empty() || hasTab(input))
+    {
+        std::cout << "Error: Tabs are not allowed!" << std::endl;
         return;
+    }
     newContact.setPhoneNumber(input);
 
     std::cout << "Enter Darkest Secret: ";
     std::getline(std::cin, input);
-    if (input.empty())
+    if (input.empty() || hasTab(input))
+    {
+        std::cout << "Error: Tabs are not allowed!" << std::endl;
         return;
+    }
     newContact.setDarkestSecret(input);
 
     int index = contactCount % 8;
