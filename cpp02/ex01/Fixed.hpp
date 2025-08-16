@@ -1,7 +1,7 @@
-#ifndef FIXED_HPP
-#define FIXED_HPP
+#pragma onec
 
 #include <iostream>
+#include <cmath>
 
 class Fixed
 {
@@ -20,10 +20,8 @@ public:
     int getRawBits() const;
     void setRawBits(int const raw);
 
-    float toFloat() const; // New
-    int toInt() const;     // New
+    float toFloat() const;
+    int toInt() const;
 };
 
-std::ostream &operator<<(std::ostream &out, const Fixed &fixed); // New
-
-#endif
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
