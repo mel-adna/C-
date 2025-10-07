@@ -45,18 +45,18 @@ void Fixed::setRawBits(int const raw)
 {
     _rawBits = raw;
 }
-
+// Float constructor
 float Fixed::toFloat() const
 {
     return (float)_rawBits / (1 << _fractionalBits);
 }
-
+// Int constructor
 int Fixed::toInt() const
 {
     return _rawBits >> _fractionalBits;
 }
 
-// << operator overload
+// << operator overload show compiler how to print Fixed calss
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
 {
     out << fixed.toFloat();

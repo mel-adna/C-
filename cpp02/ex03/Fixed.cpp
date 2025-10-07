@@ -1,5 +1,4 @@
 #include "Fixed.hpp"
-#include <cmath>
 
 // Default constructor
 Fixed::Fixed() : _rawBits(0) {}

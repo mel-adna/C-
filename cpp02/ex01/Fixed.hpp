@@ -1,4 +1,4 @@
-#pragma onec
+#pragma once
 
 #include <iostream>
 #include <cmath>
@@ -11,8 +11,8 @@ private:
 
 public:
     Fixed();                              // Default constructor
-    Fixed(const int n);                   // New: from int
-    Fixed(const float f);                 // New: from float
+    Fixed(const int n);                   // New: from int constructor
+    Fixed(const float f);                 // New: from float constructor
     Fixed(const Fixed &other);            // Copy constructor
     Fixed &operator=(const Fixed &other); // Copy assignment
     ~Fixed();                             // Destructor

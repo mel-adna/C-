@@ -9,10 +9,10 @@ private:
     static const int _fractionalBits = 8;
 
 public:
-    Fixed();                              // Default constructor
-    Fixed(const Fixed &other);            // Copy constructor
-    Fixed &operator=(const Fixed &other); // Copy assignment
-    ~Fixed();                             // Destructor
+    Fixed();                        // Default constructor
+    Fixed(Fixed &other);            // Copy constructor
+    Fixed &operator=(Fixed &other); // Copy assignment
+    ~Fixed();                       // Destructor
 
     int getRawBits() const;
     void setRawBits(int const raw);
