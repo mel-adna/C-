@@ -1,9 +1,9 @@
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
-Bureaucrat::Bureaucrat() : name("Defult Name"), Grade(150) {}
+Bureaucrat::Bureaucrat() : name("Default Name"), grade(150) {}
 
-Bureaucrat::Bureaucrat(const Bureaucrat &oth) : name(oth.name), Grade(oth.Grade) {}
+Bureaucrat::Bureaucrat(const Bureaucrat &oth) : name(oth.name), grade(oth.grade) {}
 
 Bureaucrat::Bureaucrat(const std::string &name, int grade) : name(name)
 {
@@ -11,13 +11,13 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade) : name(name)
         throw GradeTooHighException();
     else if (grade > 150)
         throw GradeTooLowException();
-    this->Grade = grade;
+    this->grade = grade;
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &oth)
 {
     if (this != &oth)
-        this->Grade = oth.Grade;
+        this->grade = oth.grade;
     return *this;
 }
 
@@ -30,21 +30,21 @@ std::string Bureaucrat::getName() const
 
 int Bureaucrat::getGrade() const
 {
-    return this->Grade;
+    return this->grade;
 }
 
 void Bureaucrat::incrementGrade()
 {
-    if (Grade - 1 < 1)
+    if (grade - 1 < 1)
         throw GradeTooHighException();
-    Grade--;
+    grade--;
 }
 
 void Bureaucrat::decrementGrade()
 {
-    if (Grade + 1 > 150)
+    if (grade + 1 > 150)
         throw GradeTooLowException();
-    Grade++;
+    grade++;
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()

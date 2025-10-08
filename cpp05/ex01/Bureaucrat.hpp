@@ -1,13 +1,15 @@
 #pragma once
-#include <ostream>
+#include <iostream>
+#include <string>
+#include <exception>
 
 class Form;
 
 class Bureaucrat
 {
 private:
-    std::string name;
-    int Grade;
+    const std::string name;
+    int grade;
 
 public:
     Bureaucrat();
