@@ -21,24 +21,20 @@ ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) : AForm(
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
     AForm::execute(executor);
-    
+
     std::ofstream file((this->target + "_shrubbery").c_str());
     if (file.is_open())
     {
-        file << "       /\\      " << std::endl;
-        file << "      /  \\     " << std::endl;
-        file << "     /    \\    " << std::endl;
-        file << "    /______\\   " << std::endl;
-        file << "       ||      " << std::endl;
-        file << "       ||      " << std::endl;
-        file << std::endl;
-        file << "     /\\   /\\   " << std::endl;
-        file << "    /  \\ /  \\  " << std::endl;
-        file << "   /    X    \\ " << std::endl;
-        file << "  /    / \\    \\" << std::endl;
-        file << " /_____\\_/_____\\" << std::endl;
-        file << "       ||      " << std::endl;
-        file << "       ||      " << std::endl;
+        file << "                  %%%,%%%%%%%" << std::endl;
+        file << "                   ,'%% \\-*%%%%%%%" << std::endl;
+        file << "             ;%%%%%*%   _%%%%\"" << std::endl;
+        file << "              ,%%%       \\(_.*%%%%." << std::endl;
+        file << "              % *%%, ,%%%%*(    '" << std::endl;
+        file << "            %^     ,*%%% )\\|,%%*%,_" << std::endl;
+        file << "                 *%    \\/ ).-\"*%%*" << std::endl;
+        file << "                     _./ / *%," << std::endl;
+        file << "             _________/#/_____________" << std::endl;
+        file << "            mel-adna" << std::endl;
         file.close();
     }
 }
